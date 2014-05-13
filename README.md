@@ -20,12 +20,12 @@ Cloud Foundry:
 Docker:
 
 	https://github.com/boot2docker/boot2docker
+	
+	Stop running containers: docker stop $(docker ps -a -q)
 
-  Stop running containers: docker stop $(docker ps -a -q)
+	Delete stopped containers: docker rm $(docker ps -a -q)
 
-  Delete stopped containers: docker rm $(docker ps -a -q)
-
-  Delete untagged images:	docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
+	Delete untagged images:	docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
 	
 	Build: docker build -t bjornno/app .
 	
