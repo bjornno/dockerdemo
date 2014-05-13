@@ -16,13 +16,13 @@ Cloud Foundry:
 
 
 Useful docker commands:
+
   Stop running containers:
 		docker stop $(docker ps -a -q)
   Delete stopped containers:
 		docker rm $(docker ps -a -q)
   Delete untagged images:
 		docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
-
 	Build:
 		docker build -t bjornno/app .
 	run:
