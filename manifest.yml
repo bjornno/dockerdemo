@@ -4,5 +4,7 @@ applications:
   memory: 128M
   instances: 1
   host: cf-scale-demo-${random-word}
-  domain: cfapps.io
+  domain: 10.244.0.34.xip.io
   path: .
+  services:
+  - postgresql
