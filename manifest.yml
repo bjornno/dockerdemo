@@ -1,10 +1,8 @@
 ---
 applications:
-- name: cf-scale-demo
+- name: demo
   memory: 128M
   instances: 1
-  host: cf-scale-demo-${random-word}
+  host: demo-${random-word}
   domain: 10.244.0.34.xip.io
   path: .
-  services:
-  - postgresql

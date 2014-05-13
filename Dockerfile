@@ -1,7 +1,6 @@
-FROM bjornno/ruby
-ADD . /
-RUN bundle install
-ENV port 3000
-EXPOSE 3000
-CMD ["rackup", "-p 3000"]
+FROM bjornno/ubuntu
+RUN git clone https://github.com/bjornno/dockerdemo.git
+WORKDIR /dockerdemo
+RUN bundle 
+CMD ["rackup"]
 
